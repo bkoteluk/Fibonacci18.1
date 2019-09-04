@@ -1,22 +1,17 @@
-package pl.bkoteluk.Service;
+package pl.bkoteluk.service;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class FibonacciTest {
-    Fibonacci fibonacci;
+    FibonacciService fibonacci;
 
     @BeforeEach
     void setUp() {
-        fibonacci = new Fibonacci();
+        fibonacci = new FibonacciService();
     }
 
     @Test
@@ -26,17 +21,6 @@ class FibonacciTest {
 
         boolean result = fibonacci.isEven(testNumber);
         Assertions.assertEquals(expectedResult, result);
-    }
-
-    @Test
-    void whenNumbersAreFiveAndEight_shouldReturnThirteen() {
-        int testNumberFive = 5;
-        int testNumberEight = 8;
-        int expectedResult = 13;
-
-        int result = fibonacci.nextFibonacciNumber(testNumberFive, testNumberEight);
-        assertThat(result, is(expectedResult));
-
     }
 
     @Test

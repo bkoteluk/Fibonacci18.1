@@ -1,19 +1,6 @@
-package pl.bkoteluk.Service;
+package pl.bkoteluk.service;
 
-public class Fibonacci {
-    public static int MAX_NUMBER = 4_000_000;
-
-    public boolean isEven(int number) {
-        return number%2 == 0;
-    }
-
-    public boolean isNumberSmallerThenMaxNumber(int number, int maxNumber) {
-        return number < maxNumber;
-    }
-
-    public int nextFibonacciNumber(int prevNumber, int nextNumber) {
-        return prevNumber+nextNumber;
-    }
+public class FibonacciService {
 
     public int sumEvenFromFibonacci(int maxNumber) {
         int prevNumber = 1;
@@ -30,4 +17,15 @@ public class Fibonacci {
         return sum;
     }
 
+    protected boolean isEven(int number) {
+        return number%2 == 0;
+    }
+
+    private boolean isNumberSmallerThenMaxNumber(int number, int maxNumber) {
+        return number < maxNumber;
+    }
+
+    private int nextFibonacciNumber(int prevNumber, int nextNumber) {
+        return prevNumber+nextNumber;
+    }
 }
