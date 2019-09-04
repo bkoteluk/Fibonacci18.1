@@ -1,6 +1,6 @@
 package pl.bkoteluk.fibonacci;
 
-import pl.bkoteluk.service.FibonacciService;
+import pl.bkoteluk.fibonacci.service.FibonacciService;
 
 public class Application {
     public static void main(String[] args) {

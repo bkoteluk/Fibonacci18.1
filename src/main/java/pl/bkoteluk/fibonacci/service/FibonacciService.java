@@ -1,4 +1,4 @@
-package pl.bkoteluk.service;
+package pl.bkoteluk.fibonacci.service;
 
 public class FibonacciService {
 
